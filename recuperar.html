@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña - PNK</title>
+    <link rel="icon" type="image/png" href="img/pnkpnk.png?v=5">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="body-recuperar">
+    <div class="caja-recuperar">
+        <div class="logo-text-container logo-recuperar">
+            <img src="img/pnkpnk.png" alt="Logo PNK" class="menu-logo">
+        </div>
+        <h2>Recuperar Contraseña</h2>
+        <p>Ingresa tu correo electrónico o RUT y te enviaremos las instrucciones para restablecer tu acceso.</p>
+        <form id="form-recuperar" novalidate>
+            <div class="input-group">
+                <label for="recuperar-usuario">Correo Electrónico o RUT</label>
+                <input id="recuperar-usuario" name="usuario" type="text" placeholder="ejemplo@correo.com o 12.345.678-5" required>
+            </div>
+            <button type="submit" class="btn-primary">Enviar Instrucciones</button>
+        </form>
+        <a href="index.html" class="btn-link">← Volver al Login</a>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

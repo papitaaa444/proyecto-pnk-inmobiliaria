@@ -1,0 +1,182 @@
+/* Reseteo y variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e5e7eb; /* Fondo gris claro */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor que centra todo en medio de la pantalla */
+.contenedor-principal {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* La tarjeta blanca dividida en dos */
+.tarjeta-login {
+    background: #ffffff;
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    display: flex;
+    overflow: hidden; /* Evita que las fotos se salgan de los bordes redondeados */
+}
+
+/* --- LADO IZQUIERDO: FORMULARIO --- */
+.seccion-formulario {
+    width: 50%;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo h1 {
+    color: #1e3a8a; /* Azul PNK */
+    font-size: 2.5rem;
+}
+
+.logo span {
+    color: #10b981; /* Verde PNK */
+}
+
+.logo p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    display: block;
+    margin-bottom: 8px;
+    color: #374151;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.grupo-input input:focus {
+    border-color: #1e3a8a;
+}
+
+.btn-ingresar {
+    width: 100%;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-ingresar:hover {
+    background-color: #152c6b;
+}
+
+.enlaces-extra {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.enlaces-extra p {
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.enlaces-extra a {
+    color: #10b981;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlaces-extra a:hover {
+    text-decoration: underline;
+}
+
+/* --- LADO DERECHO: CARRUSEL --- */
+.seccion-carrusel {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 300%; /* 3 imágenes = 300% */
+    height: 100%;
+    transition: transform 1s ease-in-out; /* Efecto cortina suave */
+}
+
+.slider img {
+    width: 33.333%; /* Cada imagen toma el 100% del espacio visible */
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+/* Texto flotante sobre las fotos */
+.capa-texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+}
+
+.capa-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+/* --- RESPONSIVO (Móviles) --- */
+@media (max-width: 800px) {
+    .tarjeta-login {
+        flex-direction: column-reverse; /* Pone el carrusel arriba y el login abajo */
+        height: auto;
+    }
+    .seccion-formulario, .seccion-carrusel {
+        width: 100%;
+    }
+    .seccion-carrusel {
+        height: 250px;
+    }
+    .seccion-formulario {
+        padding: 30px 20px;
+    }
+}

@@ -1,0 +1,183 @@
+/* RESET Y VARIABLES */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+:root { 
+    --color-rosado: #FF0066; 
+    --color-negro: #000000; 
+    --color-fondo: #F4F4F9; 
+}
+body { background-color: var(--color-fondo); }
+
+/* HEADER */
+.header-superior { max-width: 1100px; margin: 0 auto; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+.logo-text-container { display: flex; align-items: center; gap: 15px; }
+.menu-logo { height: 60px; width: auto; }
+.logo-header { font-size: 24px; font-weight: 900; color: var(--color-negro); }
+.logo-header span { color: var(--color-rosado); }
+.nav-cuadrados { display: flex; gap: 15px; }
+.btn-cuadrado { background: white; padding: 10px 20px; text-decoration: none; font-weight: bold; color: var(--color-negro); border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+.btn-cuadrado:hover { background: var(--color-rosado); color: white; }
+
+/* CONTENEDOR */
+.contenedor-global { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; flex-direction: column; gap: 40px; }
+
+/* LOGIN Y REGISTRO CARD */
+.login-card { display: flex; background: white; border-radius: 16px; overflow: hidden; height: 460px; max-width: 960px; margin: 20px auto; box-shadow: 0 16px 40px rgba(0,0,0,0.14); border: 1px solid #f1f1f1; }
+.forms-wrapper { flex: 1.15; position: relative; overflow: hidden; background: #fff; }
+.forms-slider { display: flex; width: 200%; height: 100%; transition: transform 0.6s cubic-bezier(0.77,0,0.175,1); }
+.form-panel { width: 50%; padding: 18px 22px; display: flex; flex-direction: column; justify-content: flex-start; overflow-y: auto; }
+.logo-text { font-size: 26px; font-weight: 900; margin-bottom: 12px; text-align: center; }
+.inmobiliaria { color: var(--color-rosado); }
+
+/* FORMULARIOS Y PESTAÑAS */
+.registro-tabs { display: flex; gap: 10px; margin-bottom: 12px; justify-content: center; }
+.tab-btn { padding: 8px 14px; border: none; background: #f3f4f6; cursor: pointer; border-radius: 8px; font-weight: 700; font-size: 12px; }
+.tab-btn.active { background: var(--color-rosado); color: white; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.input-group { margin-bottom: 9px; }
+.input-group label { display: block; font-size: 11px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase; }
+.input-group input, .select-estilizado { width: 100%; padding: 9px 10px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 13px; transition: 0.2s ease; }
+.input-group input:focus, .select-estilizado:focus { border-color: var(--color-rosado); box-shadow: 0 0 0 3px rgba(255,0,102,0.12); outline: none; }
+.fecha-desglosada { display: flex; gap: 5px; }
+
+.btn-primary { width: 100%; padding: 11px; background: linear-gradient(90deg, #111 0%, #2a2a2a 100%); color: white; border: none; border-radius: 9px; font-weight: 800; cursor: pointer; text-transform: uppercase; margin-top: 8px; transition: 0.25s ease; letter-spacing: .3px; }
+.btn-primary:hover { background: linear-gradient(90deg, #ff0066 0%, #d60056 100%); transform: translateY(-1px); }
+.btn-link { color: var(--color-negro); text-decoration: none; font-weight: bold; font-size: 12px; }
+.btn-link:hover { color: var(--color-rosado); }
+
+.register-footer { margin-top: auto; padding-top: 15px; text-align: center; }
+.link-group { display: flex; justify-content: center; align-items: center; gap: 8px; font-size: 12px; }
+
+/* Mantener visible el enlace "Ya tengo cuenta" en la parte inferior del panel */
+.register-footer {
+    position: relative;
+    bottom: auto;
+    background: transparent;
+    padding-top: 12px;
+    margin-top: 10px;
+    z-index: 1;
+    width: 100%;
+}
+
+.register-footer::before {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background: #E5E7EB;
+    margin: 8px auto 10px;
+    border-radius: 2px;
+}
+
+.register-footer .btn-link {
+    display: inline-block;
+    font-size: 13px;
+    color: #6B7280;
+    text-decoration: none;
+}
+
+.register-footer .btn-link:hover {
+    color: var(--color-rosado);
+}
+
+/* CARRUSEL */
+.login-images-container { flex: 0.85; position: relative; overflow: hidden; min-height: 460px; }
+.carousel, .carousel-inner { display: flex; width: 300%; height: 100%; transition: transform 1s ease; }
+.slide { width: 33.333%; height: 100%; position: relative; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
+.gradient-overlay { position: absolute; bottom: 0; width: 100%; height: 30%; background: linear-gradient(transparent, rgba(0,0,0,0.7)); display: flex; align-items: flex-end; padding: 15px; }
+.badge-ubicacion { background: var(--color-rosado); color: white; padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: bold; }
+
+/* PORTAL */
+.seccion-portal { background: #87CEFA; padding: 20px; border-radius: 10px; }
+.barra-busqueda { display: flex; gap: 10px; margin-bottom: 20px; }
+.barra-busqueda select { flex: 1; padding: 10px; border-radius: 5px; border: none; }
+.btn-buscar { padding: 10px 20px; background: white; border: none; font-weight: bold; border-radius: 5px; cursor: pointer; }
+
+/* =========================================
+   DISEÑO DE CONTACTO CORREGIDO
+   ========================================= */
+#contacto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.rectangulo-blanco-centrado {
+    background-color: #ffffff !important;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-logo-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.logo-pequeno-fijo {
+    width: 50px !important;
+    height: auto !important;
+}
+
+.titulo-pnk-contacto {
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.pnk-black { color: #000000 !important; }
+.contactos-pink { color: var(--color-rosado) !important; }
+
+.bloque-info-final {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.linea-dato {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.label-pink {
+    color: var(--color-rosado) !important;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.valor-black {
+    color: #000000 !important;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+@media (max-width: 800px) {
+    .login-card { flex-direction: column; height: auto; min-height: auto; }
+    .forms-wrapper { height: auto; }
+    .form-panel { width: 50%; max-height: none; }
+    .login-images-container { height: 220px; min-height: 220px; }
+    .form-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+    .header-superior { flex-direction: column; gap: 14px; }
+    .nav-cuadrados { flex-wrap: wrap; justify-content: center; }
+    .login-card { border-radius: 12px; }
+    .form-panel { padding: 18px 16px; }
+    .logo-text { font-size: 24px; }
+}
